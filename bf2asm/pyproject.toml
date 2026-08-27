@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bf2asm"
+version = "0.1.0"
+description = "A Brainfuck to x86-64 assembly compiler"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Your Name" }]
+keywords = ["brainfuck", "compiler", "x86-64", "assembly", "esolang"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Compilers",
+]
+
+[project.scripts]
+bf2asm = "bf2asm.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["bf2asm*"]
